@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2023/12/06/hello-world/"/>
+      <url>/2023/12/06/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>个人介绍</title>
+      <link href="/2019/12/17/Introduction/"/>
+      <url>/2019/12/17/Introduction/</url>
+      
+        <content type="html"><![CDATA[<p><font color=DarkSlateGray size=6 face="楷体"><strong>恭迎阁下来到我的博客</strong></font><br><font color=DarkSlateGray size=5 face="楷体">我是这里的博主小鱼仙君<br>我是一名独立游戏制作练习生，咳咳…<br>正文:我出生于2001年来至重庆的,比较喜欢吃辣和酸,不喜欢甜食,平常喜欢在外面散步发呆什么的。我是一名悠闲的博主,是一个萌新开发者你在我这里也看不到什么干货,游戏开发风格喜欢剧情游戏,平常就聊一些我在开发日常中的事情。</p></font>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>日记</title>
+      <link href="/2019/12/12/test/"/>
+      <url>/2019/12/12/test/</url>
+      
+        <content type="html"><![CDATA[<details>  <summary><font color=black>2019 12/14</font></summary>  <pre><code>  这是我第一次写的日记,我正在学习做独立游戏,我已经坚持几个月了,在以后的日子我不知道我还可不可以坚持下去.我现在的环境还是比较困难,现在只有我自己一个人在支持我,所以我一定要坚持下去,我不知道我是否可以坚持5年甚至10年,我现在必须乐观起来,我相信在不久后会有人认可我的。加油我自己！  </code></pre></details><details><summary><font color=black>2019 12/18</font></summary><pre><code>现在是晚上,好几天没有写日记了,这几天我一直在看插件的使用,看来easy save,和unity 2D骨骼插件,我在使用中有遇到一些小问题,对于多骨骼控制多精灵的设置上出现了一些小问题,也不是很难，IK反动力学也不是很难,感觉今天一天没遇到什么问题。对了在有一次做动画的时候发现了播放动画一定要加动画器,不能只加动画元素,这个问题让我困惑了很久还好解决了...没了今天就这样吧.</code></pre></details><details><summary><font color=black>2019 12/21</font></summary><pre><code>玩了一会游戏之后感觉状态不是很好,就去想了一下游戏的剧情和玩法,我想做一个像科幻武侠小说一样的剧情,里面会添加很多奇怪的元素,你扮演的角色将不是游戏的主角,你会体验从别的视角去玩这个游戏,你会在历练中慢慢变强,游戏中的动画会比较多,所以现在动画要怎么做这个问题让我非常头疼,最近了解了时间轴我觉得可以用这个来做过场动画。想了想我的绘画水平,游戏绘画风格会比较抽象,风格看起来比较简单,一直在想剧情这是我整个游戏最重要的地方。游戏玩法是2D视角平面视角，游戏中就是走来走去的看风景,剧情比较线性,几个小时就可以结束了。</code></pre></details><details><summary><font color=black>2019 12/28</font></summary><pre><code>晚上经常有出去散步,去了一些平常没有去过的地方,探索未知的领域。最近感觉,时间过的好快,好着急啊。unity上的时间线功能做过程动画很方便,里面可以融合很多元素,还可以把两个动画融合加起来效果还可以,用起来很方便。今天看见一个游戏To The Moon中文名去月球，我想做的就是这样的游戏,游戏还没玩但是看的宣传视频感觉很不错,他的游戏音乐很好听,我很喜欢独立音乐。在游戏语言上面目前不打算用别的,只有中文,游戏故事上的对话不采用配音,只有过场动画上有配音。游戏剧情上会有很多冒险元素,就和平常生活一样。还有一点彩蛋,我想在里面在讲一些民间故事。游戏世界观大概j'主要是激励人们打破世界局线行,成就别人觉得不可能的梦想,最后成为男主角的故事。游戏是一款像素国风游戏,里面有很多国风元素,玄幻元素,解迷元素,最重要还有一点生活元素,里面有一些简单的食物在做剧情饿的时候吃,有小店,菜馆,菜场,等等,场景还原古时候的现实生活,体验人生的感觉，目前这样这样的大概想法。<p></code></pre></p></details><details><summary><font color=black>2020 1/4</font></summary><pre><code>2020第一次写,最近有些忙，steam打折,大部分时间在玩一些游戏加些认知,以前的了解太少了,要做游戏是一定要玩一些游戏的,等在过一段时间放假了,就要开始准备游戏需要的素材了,我会花一个月的时间来准备。最近大部分时间在学校不能冷静下来,没法好好想,现在就是处于一个等的阶段。<p></code></pre></p></details><details><summary><font color=black>2020 10/4</font></summary><pre><code>好久没有打开我的博客，发现被国内和谐了。就在一个月前面我参加了游戏推广这个职业，就在昨天我辞职了，我产生了一些想法，游戏推广是真的难，每天要起老早上游戏抢客户资源（上号创帮派），创建好后有人进来的话后面就是跟玩家一起玩游戏练级，每天要同时玩好几个号，这样才能有足够的资源（是去别的游戏拉人创建帮派）后面的大部分时间就是聊天了，打进玩家内部和他们成为朋友，了解他们平时喜欢玩什么游戏，了解一下他们平时的爱好，以及他的氪金能力，也就是有没有钱，是不是土豪，是不是什么都不懂的人（不知道我们是推广），到了最后环节就是开始忽悠了，慢慢的说我们现在玩的这个游戏不好玩（新神魔大陆），有点无聊了什么的，然后开始表演，前面忘记说了，在创建好帮派后我们在游戏里认识的玩家会拉进一个群，群里一半都是我们自己的人，为了配合我们后面的表演，表演内容就是群里的人按照剧本聊天，内容大概就是现在这游戏不好玩了，大家一起去玩别的游戏（别的游戏就是我们自己的游戏）总有几个人会被你忽悠走，这时候你就可以和他聊自己的游戏了，然后各种忽悠让他在游戏里面充值，他在游戏里充的钱你是有提成的，游戏内部还有GS也就是在游戏里开着语音带你们玩的，他们都很热情，他们的抽成是按整个公司推广拉的人抽的，就是推广没拉到充钱的人他们也就没有钱，差不多工作内容就是这样了，对了偶尔还会遇到炸群的人，冒充玩家然后认识你跑进你的群偷偷的把你玩家忽悠走，或者在你洗群的时候炸你（疯狂发一些你是骗子什么的话）这是最无语的了，同时你也可以去炸别人，那叫一个舒服。<p></code></pre></p></details><details><summary><font color=black>2021 8/30</font></summary><pre><code>已经2021了疫情还是没有结束，这一年我经理了太多事了，我换了个工作做学校的IT支持，就是帮学校打杂工，非常的无聊，而且没什么意思，后面到了一家公司做网络运维，到岛内租了间房子，每个月1000多房租，感觉还行，最近也去了很多东西冒险，去了很多废墟的地方，非常有意思东西太多，说不清楚，只能说加油吧，完成我的梦想，希望有机会能出去看看，离开这个城市去别的地方。<p></code></pre></p></details><details><summary><font color=black>2022 1/27</font></summary><pre><code>对刚刚过去的GGJ做一个总结，比赛主题二元性，算上线上线下的这已经是我第四次参加了，在之前的比赛中要么就是靠队友，要么就是摸鱼位置。这一次虽然是线上的，但是我花费的时间比以往要多，比之前要认真一些，虽然很累但是感觉对自己的能力还是有提升的，锻炼到了遇到问题自我解决的能力，和队伍的组织能力，我感到非常不错对自己的表现还是比较满意，这边来简单说一下这次我比赛做的游戏我的思路，我在这次比赛中是有提出过两个想法，第一个就是玩家控制的两个人物，一个叫左手，一个叫右手，大概玩法就是玩家需要同时控制两个人物，来进行平台跳跃的闯关，简单点说就是比例一个人同时玩两个贪吃蛇的感觉，我一开始是想锻炼玩家的反逻辑思想，后来发现这样的玩法挺无聊的，不就是同时玩两个游戏吗，好像没什么创意。第二个想法，这是一个平台跳跃闯关游戏，也就是我这次引用的想法，这个世界会突然白天突然黑夜，通关时间有规定时间，晚上玩家会什么都看不见，需要玩家在白天时记住地图大概部分路线好节约时间，就不一定要等白天在走了，后面还有BOSS会从左移动，向玩家这边飞来，也给游戏增加了紧张感，地图也会出现一些道具有的平台站上面会让玩家玩法跳跃，移动变慢，有的平台会让玩家获得长距离冲刺，这里游戏的操作方式有WASD移动，二段跳跃，和一个冲刺，冲刺需冷却1.5秒，这边就是游戏的核心玩法了由于时间的问题很多东西还是没有完善好，这种比赛时间控制真的很重要，希望下次我能更好的控制时间。</code></pre></details>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
