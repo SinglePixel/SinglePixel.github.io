@@ -1,139 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>记录事件 | Hexo</title>
+  <meta name="author" content="John Doe">
+  
+  <meta name="description" content="2019 12/14
+    
+这是我第一次写的日记,我正在学习做独立游戏,我已经坚持几个月了,在以后的日子我不知道我还可不可以
+坚持下去.我现在的环境还是比较困难,现在只有我自己一个人在支持我,所以我一定要坚持下去,我不知道我
+是否可以坚持5年甚至10年,我现在必须乐观起来,我相信在不久后会有人认">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!DOCTYPE html>
-<html lang="zh-CN">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>记录事件 | Hexo</title>
-        <meta name="author" content="John Doe">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <link rel="icon" href="">
-        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
-        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
-        <link rel="stylesheet" href="/css/fonts.min.css">
-        <link rel="stylesheet" href="/css/particlex.css">
-        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
-    <meta name="generator" content="Hexo 4.2.1"></head>
-    <body>
-        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
-        <div id="layout">
-            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
-            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
-            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
-            <transition name="into">
-                <div v-show="show_page" style="display: -not-none">
-                    <div id="menu_show">
-                         
-<nav id="menu">
-    <div class="desktop-menu">
-        <a href="/">
-            <span class="title">Hexo</span>
-        </a>
-        
-        <a href="/">
-            <i class="fa-solid fa-house fa-fw"></i>
-            <span>&ensp;home</span>
-        </a>
-        
-        <a href="/about">
-            <i class="fa-solid fa-id-card fa-fw"></i>
-            <span>&ensp;about</span>
-        </a>
-        
-        <a href="/archives">
-            <i class="fa-solid fa-box-archive fa-fw"></i>
-            <span>&ensp;archives</span>
-        </a>
-        
-        <a href="/categories">
-            <i class="fa-solid fa-bookmark fa-fw"></i>
-            <span>&ensp;categories</span>
-        </a>
-        
-        <a href="/tags">
-            <i class="fa-solid fa-tags fa-fw"></i>
-            <span>&ensp;tags</span>
-        </a>
-        
-    </div>
-    <div :class="'phone-menu ' + menu_show" id="phone-menu">
-        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
-        <div :class="'title'" @click="menu_show = !menu_show">
-            <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;Hexo</span>
-        </div>
-        <transition name="slide">
-        <div class="items" v-show="menu_show">
-            
-            <a href="/">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-house fa-fw"></i>
-                    </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%">home</div>
-                </div>
-            </a>
-            
-            <a href="/about">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-id-card fa-fw"></i>
-                    </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%">about</div>
-                </div>
-            </a>
-            
-            <a href="/archives">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-box-archive fa-fw"></i>
-                    </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%">archives</div>
-                </div>
-            </a>
-            
-            <a href="/categories">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-bookmark fa-fw"></i>
-                    </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%">categories</div>
-                </div>
-            </a>
-            
-            <a href="/tags">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%">tags</div>
-                </div>
-            </a>
-            
-        </div>
-        </transition>
-    </div>
+  <meta property="og:title" content="记录事件"/>
+  <meta property="og:site_name" content="Hexo"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-70812759-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Hexo</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Subscribe me.">
+			  <i class=""></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
 </nav>
-                    </div>
-                    <div id="main">
-                        
-<div class="article">
-    <div>
-        <h1>记录事件 </h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
-            </span>
-            2019/12/12
-        </span>
-        
-        
-    </div>
-    <div class="content" v-pre>
-        <img src="/images/toxian4.jpg" width = "20%" height = "20%" div align=right  />
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header">
+			<h1> 记录事件</h1>
+		</div>
+	
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <img src="/images/toxian4.jpg" width = "20%" height = "20%" div align=right  />
 <details>
   <summary><font color=black>2019 12/14</font></summary>
   <pre><code>  
@@ -227,60 +222,110 @@ unity上的时间线功能做过程动画很方便,里面可以融合很多元�
 由于时间的问题很多东西还是没有完善好，这种比赛时间控制真的很重要，希望下次我能更好的控制时间。123tets达瓦达瓦
 </code></pre>
 </details>
+	  
+	</div>
 
-    </div>
+	<div>
+  	<center>
+	<div class="pagination">
+
     
-    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
-    <div id="comment">
-        <div id="gitalk-container">
-        </div>
-    </div>
+    
+    <a href="/2019/12/17/Introduction/" type="button" class="btn btn-default"><i
+                class="fa fa-arrow-circle-o-left"></i> Prev</a>
+    
+
+    <a href="/" type="button" class="btn btn-default"><i class="fa fa-home"></i>Home</a>
+    
+    <a type="button" class="btn btn-default disabled">Next<i class="fa fa-arrow-circle-o-right"></i></a>
+    
+
     
 </div>
-                         
-<footer id="footer">
-    <div class="footer-wrap">
-        <div>
-            © 2022 - 2023 Hexo
-            <span class="footer-icon">
-                <i class="fa-solid fa-font-awesome fa-fw"></i>
-            </span>
-            @John Doe
-        </div>
-        <div></div>
-        <div>Based on the <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo Engine</a> & <a
-                href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
-        
-    </div>
-</footer>
-                    </div>
-                </div>
-            </transition>
-            <div id="img_show">
-                <img id="img_content" alt="img_show">
-            </div>
-        </div>
-        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
-        <script src="/js/particlex.js"></script>
-        <script src="/js/showimg.js"></script>
-        
-<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
-<script>
-    var clientID = "", clientSecret = "";
+
+    </center>
+	</div>
+	
+	<!-- comment -->
+	
+<section id="comment">
+    <h2 class="title">Comments</h2>
+
     
-    const gitalk = new Gitalk({
-        clientID: clientID,
-        clientSecret: clientSecret,
-        repo: "",
-        owner: "",
-        admin: [""],
-        language: "zh-CN",
-        id: location.pathname,
-        distractionFreeMode: true
-    })
-    gitalk.render("gitalk-container")
+</section>
+
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2019-12-12 
+	</div>
+	
+
+	<!-- categories -->
+    
+
+	<!-- tags -->
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2023 John Doe
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a>,<a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>,<a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>. 
+     <br> Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind.386</a>.    
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
 </script>
 
 
-    </body>
-</html>
+
+</body>
+   </html>

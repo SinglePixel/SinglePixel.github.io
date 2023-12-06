@@ -1,201 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  
+  <title>Hexo</title>
+  <meta name="author" content="John Doe">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!DOCTYPE html>
-<html lang="zh-CN">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>Hexo</title>
-        <meta name="author" content="John Doe">
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <link rel="icon" href="">
-        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
-        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
-        <link rel="stylesheet" href="/css/fonts.min.css">
-        <link rel="stylesheet" href="/css/particlex.css">
-        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
-    <meta name="generator" content="Hexo 4.2.1"></head>
-    <body>
-        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
-        <div id="layout">
-            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
-            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
-            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
-            <transition name="into">
-                <div v-show="show_page" style="display: -not-none">
-                    <div id="menu_show">
-                         
-<nav id="menu">
-    <div class="desktop-menu">
-        <a href="/">
-            <span class="title">Hexo</span>
-        </a>
-        
-        <a href="/">
-            <i class="fa-solid fa-house fa-fw"></i>
-            <span>&ensp;home</span>
-        </a>
-        
-        <a href="/about">
-            <i class="fa-solid fa-id-card fa-fw"></i>
-            <span>&ensp;about</span>
-        </a>
-        
-        <a href="/archives">
-            <i class="fa-solid fa-box-archive fa-fw"></i>
-            <span>&ensp;archives</span>
-        </a>
-        
-        <a href="/categories">
-            <i class="fa-solid fa-bookmark fa-fw"></i>
-            <span>&ensp;categories</span>
-        </a>
-        
-        <a href="/tags">
-            <i class="fa-solid fa-tags fa-fw"></i>
-            <span>&ensp;tags</span>
-        </a>
-        
-    </div>
-    <div :class="'phone-menu ' + menu_show" id="phone-menu">
-        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
-        <div :class="'title'" @click="menu_show = !menu_show">
-            <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;Hexo</span>
-        </div>
-        <transition name="slide">
-        <div class="items" v-show="menu_show">
-            
-            <a href="/">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-house fa-fw"></i>
-                    </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%">home</div>
-                </div>
-            </a>
-            
-            <a href="/about">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-id-card fa-fw"></i>
-                    </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%">about</div>
-                </div>
-            </a>
-            
-            <a href="/archives">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-box-archive fa-fw"></i>
-                    </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%">archives</div>
-                </div>
-            </a>
-            
-            <a href="/categories">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-bookmark fa-fw"></i>
-                    </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%">categories</div>
-                </div>
-            </a>
-            
-            <a href="/tags">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-tags fa-fw"></i>
-                    </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%">tags</div>
-                </div>
-            </a>
-            
-        </div>
-        </transition>
-    </div>
+  
+  <meta property="og:site_name" content="Hexo"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-70812759-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+	  <a class="navbar-brand" href="/">Hexo</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class=""></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class=""></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class=""></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class=""></i>About
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/atom.xml" title="Subscribe me.">
+			  <i class=""></i>RSS
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
 </nav>
-                    </div>
-                    <div id="main">
-                        <div id="home-head">
-    <div id="home-background" style="background-image: url()"></div>
-    
-    <div id="home-info" class="home-info" @click="home_click">
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="loop"></span>
-        <span class="info">
-            <div class="wrap">
-                <h1>Hexo</h1>
-                <h3></h3>
-                <h5></h5>
-            </div>
-        </span>
-    </div>
-    
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 <div class="page-header logo">
+  <h1>Hexo<span class="blink-fast">∎</span></h1>
 </div>
 
-<div id="home-posts-wrap" class=>
-    <div id="home-posts">
-        <div id="posts">
-            
+<div class="row page">
 
-<div class="post">
-    <a href="/2019/12/17/Introduction/">
-        <h2>
-            个人介绍
-        </h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
-            </span>
-            2019/12/17
-        </span>
-    </div>
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=0 height=86 src="/images/yiyu.mp3"></iframe>
+	
+	<div class="col-md-9">
+	
+
+		<div class="slogan">
+
+
+		<i class="fa fa-heart blink-slow"></i>
+
+		Keep and carry on.
+
+</div>    
+
+		<div id="top_search"></div>
+		<div class="mypage">
+		
+		<!-- title and entry -->
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2023/12/06/hello-world/" >Hello World</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2023-12-06  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+	
+	</div>
+  <a type="button" href="/2023/12/06/hello-world/#more" class="btn btn-default more">Read More</a>
+</div>
+
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2019/12/17/Introduction/" >个人介绍</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2019-12-17  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=0 height=86 src="/images/yiyu.mp3"></iframe>
 <img src="/images/toxian3.jpg" width = "50%" height = "50%" div align=left  />
 
 <p><font color=DarkSlateGray size=6 face="楷体"><strong>恭迎阁下来到我的博客</strong></font><br><font color=DarkSlateGray size=5 face="楷体">我是这里的博主小鱼仙君<br>我是一名独立游戏制作练习生，咳咳…<br>正文:我出生于2001年来至重庆的,比较喜欢吃辣和酸,不喜欢甜食,平常喜欢在外面散步发呆什么的。我是一名悠闲的博主,是一个萌新开发者你在我这里也看不到什么干货,游戏开发风格喜欢剧情游戏,平常就聊一些我在开发日常中的事情。</p>
 </font>
 
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-    </div>
-    <a href="/2019/12/17/Introduction/" class="go-post">
-        阅读全文
-    </a>
+	
+	</div>
+  <a type="button" href="/2019/12/17/Introduction/#more" class="btn btn-default more">Read More</a>
 </div>
 
-<div class="post">
-    <a href="/2019/12/12/test/">
-        <h2>
-            记录事件
-        </h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
-            </span>
-            2019/12/12
-        </span>
-    </div>
-    <div class="excerpt">
-        <div class="content" v-pre>
-            
-            <img src="/images/toxian4.jpg" width = "20%" height = "20%" div align=right  />
+		
+			
+	
+	<!-- display as entry -->
+<div class="row">
+	<div class="col-md-8">
+		<h3 class="title">
+			<a href="/2019/12/12/test/" >记录事件</a>
+		</h3>
+		</div>
+	<div class="col-md-4">
+		<div class="date">post @ 2019-12-12  </div>
+		</div>
+	</div>
+	
+
+
+			<div class="entry">
+  <div class="row">
+	
+	
+		<img src="/images/toxian4.jpg" width = "20%" height = "20%" div align=right  />
 <details>
   <summary><font color=black>2019 12/14</font></summary>
   <pre><code>  
@@ -290,91 +311,129 @@ unity上的时间线功能做过程动画很方便,里面可以融合很多元�
 </code></pre>
 </details>
 
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-    </div>
-    <a href="/2019/12/12/test/" class="go-post">
-        阅读全文
-    </a>
+	
+	</div>
+  <a type="button" href="/2019/12/12/test/#more" class="btn btn-default more">Read More</a>
 </div>
 
-             
-<div class="page-current">
-    <div class="prev">
-        
-    </div>
-    <div class="page-index">
-        
-        <span class="current">
-            1
-        </span>
-        
-    </div>
-    <div class="next">
-        
-    </div>
-</div>
-        </div>
-    </div>
-    
-    <div id="home-card">
-        <div id="card-div">
-    <div class="card-style" style="width: 300px">
-        <div class="avatar">
-            <img src=" " alt="avatar">
-        </div>
-        <div class="name">
-            John Doe
-        </div>
-        <div class="descriptions">
-            
-            <div class="description">
-                Description...
-            </div>
-            
-        </div>
-        <div class="icon-links">
-            
-        </div>
-        <div class="friend-links">
-            
-        </div>
-    </div>
-</div>
-    </div>
-    
-</div>
-                         
-<footer id="footer">
-    <div class="footer-wrap">
-        <div>
-            © 2022 - 2023 Hexo
-            <span class="footer-icon">
-                <i class="fa-solid fa-font-awesome fa-fw"></i>
-            </span>
-            @John Doe
-        </div>
-        <div></div>
-        <div>Based on the <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo Engine</a> & <a
-                href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
-        
-    </div>
-</footer>
-                    </div>
-                </div>
-            </transition>
-            <div id="img_show">
-                <img id="img_content" alt="img_show">
-            </div>
-        </div>
-        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
-        <script src="/js/particlex.js"></script>
-        <script src="/js/showimg.js"></script>
-        
+		
 
-    </body>
-</html>
+		</div>
+
+		<!-- pagination -->
+		<div>
+  		<center>
+		<div class="pagination">
+
+   
+</div>
+
+  		</center>
+		</div>
+
+		
+		
+	</div> <!-- col-md-9 -->
+
+	
+		<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+		
+			
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/2023/12/06/hello-world/" ><i class="fa fa-file-o"></i>Hello World</a>
+      </li>
+    
+      <li>
+        <a href="/2019/12/17/Introduction/" ><i class="fa fa-file-o"></i>个人介绍</a>
+      </li>
+    
+      <li>
+        <a href="/2019/12/12/test/" ><i class="fa fa-file-o"></i>记录事件</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/hexo-theme-freemind" title="Freemind's Github repository." target="_blank">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/kristopolous/BOOTSTRA.386" title="BOOTSTRA.386's Github repository." target="_blank">BOOTSTRA.386</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/blackshow/hexo-theme-freemind.386" title="Freemind.386's Github repository." target="_blank">Freemind.386</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/blackshow" title="My Github account." target="_blank">My Github</a></li>
+	
+	</ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+	
+	
+</div> <!-- row-fluid -->
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2023 John Doe
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a>,<a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>,<a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a> and <a href="http://getbootstrap.com/" target="_blank">BOOTSTRA.386</a>. 
+     <br> Theme by <a target="_blank" rel="noopener" href="http://github.com/wzpan/hexo-theme-freemind/">Freemind.386</a>.    
+</p>
+ </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>⬆︎TOP</span>
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+</body>
+   </html>
