@@ -9,11 +9,9 @@
   <title>人生记录 | Hexo</title>
   <meta name="author" content="John Doe">
   
-  <meta name="description" content="2019 12/14
-    
-这是我第一次写的日记,我正在学习做独立游戏,我已经坚持几个月了,在以后的日子我不知道我还可不可以
-坚持下去.我现在的环境还是比较困难,现在只有我自己一个人在支持我,所以我一定要坚持下去,我不知道我
-是否可以坚持5年甚至10年,我现在必须乐观起来,我相信在不久后会有人认">
+  <meta name="description" content="function checkPassword(inputId, resultId, contentId) {
+    var passwordInput = document.getElementById(inputId);
+    var resultMessage = document.getE">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -128,17 +126,63 @@
 	<div class="mypage">		
 	  		
 
-	  <details>
-  <summary><font color=White>2019 12/14</font></summary>
-  <pre><code>  
+	  <script>
+  function checkPassword(inputId, resultId, contentId) {
+    var passwordInput = document.getElementById(inputId);
+    var resultMessage = document.getElementById(resultId);
+    var content = document.getElementById(contentId);
+
+    // 检查输入的密码是否正确
+    var enteredPassword = passwordInput.value;
+
+    // 你可以将下面的密码替换为你自己的密码
+    var correctPassword = "1314520";
+
+    if (enteredPassword === correctPassword) {
+      resultMessage.textContent = "密码正确";
+      content.style.display = "block"; // 展示内容
+    } else {
+      resultMessage.textContent = "密码错误";
+      content.style.display = "none"; // 隐藏内容
+    }
+  }
+</script>
+<style>
+  /* 密码输入框样式 */
+  input[type="password"] {
+    color: black;  /* 设置文字颜色为黑色 */
+    /* 这里可以添加其他样式，比如背景色、边框等 */
+  }
+
+  /* 确定按钮样式 */
+  button {
+    color: black;  /* 设置文字颜色为黑色 */
+    /* 这里可以添加其他样式，比如背景色、边框等 */
+  }
+</style>
+<details>
+  <summary><font color="White">2019 12/14</font></summary>
+  <p>
+    输入密码：
+    <input type="password" id="password1" />
+    <button onclick="checkPassword('password1', 'result1', 'content1')">确认</button>
+    <span id="result1"></span>
+  </p>
+  <pre><code id="content1" style="display: none;"> 
 这是我第一次写的日记,我正在学习做独立游戏,我已经坚持几个月了,在以后的日子我不知道我还可不可以
 坚持下去.我现在的环境还是比较困难,现在只有我自己一个人在支持我,所以我一定要坚持下去,我不知道我
 是否可以坚持5年甚至10年,我现在必须乐观起来,我相信在不久后会有人认可我的。加油我自己！
   </code></pre>
 </details>
 <details>
-<summary><font color=White>2019 12/18</font></summary>
-<pre><code>
+  <summary><font color="White">2019 12/18</font></summary>
+  <p>
+    输入密码：
+    <input type="password" id="password2" />
+    <button onclick="checkPassword('password2', 'result2', 'content2')">确认</button>
+    <span id="result2"></span>
+  </p>
+  <pre><code id="content2" style="display: none;">
 现在是晚上,好几天没有写日记了,这几天我一直在看插件的使用,看来easy save,和unity 2D骨骼插件,我在
 使用中有遇到一些小问题,对于多骨骼控制多精灵的设置上出现了一些小问题,也不是很难，IK反动力学也不
 是很难,感觉今天一天没遇到什么问题。对了在有一次做动画的时候发现了播放动画一定要加动画器,不能只
@@ -146,8 +190,14 @@
 </code></pre>
 </details>
 <details>
-<summary><font color=White>2019 12/21</font></summary>
-<pre><code>
+  <summary><font color="White">2019 12/21</font></summary>
+  <p>
+    输入密码：
+    <input type="password" id="password3" />
+    <button onclick="checkPassword('password3', 'result3', 'content3')">确认</button>
+    <span id="result3"></span>
+  </p>
+  <pre><code id="content3" style="display: none;">
 玩了一会游戏之后感觉状态不是很好,就去想了一下游戏的剧情和玩法,我想做一个像科幻武侠小说一样的剧
 情,里面会添加很多奇怪的元素,你扮演的角色将不是游戏的主角,你会体验从别的视角去玩这个游戏,你会在历
 练中慢慢变强,游戏中的动画会比较多,所以现在动画要怎么做这个问题让我非常头疼,最近了解了时间轴我觉得
@@ -157,8 +207,14 @@
 </code></pre>
 </details>
 <details>
-<summary><font color=White>2019 12/28</font></summary>
-<pre><code>
+  <summary><font color="White">2019 12/28</font></summary>
+  <p>
+    输入密码：
+    <input type="password" id="password4" />
+    <button onclick="checkPassword('password4', 'result4', 'content4')">确认</button>
+    <span id="result4"></span>
+  </p>
+  <pre><code id="content4" style="display: none;">
 晚上经常有出去散步,去了一些平常没有去过的地方,探索未知的领域。最近感觉,时间过的好快,好着急啊。
 unity上的时间线功能做过程动画很方便,里面可以融合很多元素,还可以把两个动画融合加起来效果还可以,用起
 来很方便。今天看见一个游戏To The Moon中文名去月球，我想做的就是这样的游戏,游戏还没玩但是看的宣传视
@@ -172,8 +228,14 @@ unity上的时间线功能做过程动画很方便,里面可以融合很多元�
 <p></code></pre></p>
 </details>
 <details>
-<summary><font color=White>2020 1/4</font></summary>
-<pre><code>
+  <summary><font color="White">2020 1/4</font></summary>
+  <p>
+    输入密码：
+    <input type="password" id="password5" />
+    <button onclick="checkPassword('password5', 'result5', 'content5')">确认</button>
+    <span id="result5"></span>
+  </p>
+  <pre><code id="content5" style="display: none;">
 2020第一次写,最近有些忙，steam打折,大部分时间在玩一些游戏加些认知,以前的了解太少了,要做游戏是一定要
 玩一些游戏的,等在过一段时间放假了,就要开始准备游戏需要的素材了,我会花一个月的时间来准备。最近大部分时
 间在学校不能冷静下来,没法好好想,现在就是处于一个等的阶段。
@@ -182,8 +244,14 @@ unity上的时间线功能做过程动画很方便,里面可以融合很多元�
 </details>
 
 <details>
-<summary><font color=White>2020 10/4</font></summary>
-<pre><code>
+  <summary><font color="White">2020 10/4</font></summary>
+  <p>
+    输入密码：
+    <input type="password" id="password6" />
+    <button onclick="checkPassword('password6', 'result6', 'content6')">确认</button>
+    <span id="result6"></span>
+  </p>
+  <pre><code id="content6" style="display: none;">
 好久没有打开我的博客，发现被国内和谐了。就在一个月前面我参加了游戏推广这个职业，就在昨天我辞职了，
 我产生了一些想法，游戏推广是真的难，每天要起老早上游戏抢客户资源（上号创帮派），创建好后有人进来的话
 后面就是跟玩家一起玩游戏练级，每天要同时玩好几个号，这样才能有足够的资源（是去别的游戏拉人创建帮派）
@@ -200,8 +268,14 @@ unity上的时间线功能做过程动画很方便,里面可以融合很多元�
 <p></code></pre></p>
 </details>
 <details>
-<summary><font color=White>2021 8/30</font></summary>
-<pre><code>
+  <summary><font color="White">2021 8/30</font></summary>
+  <p>
+    输入密码：
+    <input type="password" id="password7" />
+    <button onclick="checkPassword('password7', 'result7', 'content7')">确认</button>
+    <span id="result7"></span>
+  </p>
+  <pre><code id="content7" style="display: none;">
 已经2021了疫情还是没有结束，这一年我经理了太多事了，我换了个工作做学校的IT支持，就是帮学校打杂工，非常的无聊，而且没什么意思，
 后面到了一家公司做网络运维，到岛内租了间房子，每个月1000多房租，感觉还行，最近也去了很多东西冒险，去了很多废墟的地方，非常有意思
 东西太多，说不清楚，只能说加油吧，完成我的梦想，希望有机会能出去看看，离开这个城市去别的地方。
@@ -209,8 +283,14 @@ unity上的时间线功能做过程动画很方便,里面可以融合很多元�
 <p></code></pre></p>
 </details>
 <details>
-<summary><font color=White>2022 1/27</font></summary>
-<pre><code>
+  <summary><font color="White">2022 1/27</font></summary>
+  <p>
+    输入密码：
+    <input type="password" id="password8" />
+    <button onclick="checkPassword('password8', 'result8', 'content8')">确认</button>
+    <span id="result8"></span>
+  </p>
+  <pre><code id="content8" style="display: none;">
 对刚刚过去的GGJ做一个总结，比赛主题二元性，算上线上线下的这已经是我第四次参加了，在之前的比赛中要么就是靠队友，要么就是摸鱼位置。这一次虽然是线上的，但是我
 花费的时间比以往要多，比之前要认真一些，虽然很累但是感觉对自己的能力还是有提升的，锻炼到了遇到问题自我解决的能力，和队伍的组织能力，我感到非常不错
 对自己的表现还是比较满意，这边来简单说一下这次我比赛做的游戏我的思路，我在这次比赛中是有提出过两个想法，第一个就是玩家控制的两个人物，一个叫左手，
@@ -222,15 +302,36 @@ unity上的时间线功能做过程动画很方便,里面可以融合很多元�
 </code></pre>
 </details>
 <details>
-<summary><font color=White>2023 12/7</font></summary>
-<pre><code>
-好久不见，已经有一年多没有跟新博客了吧，工作后都挺忙的，要不是今天公司没什么事我可能也不会想到我还有博客。今天天气晴，温度22，非常舒服的一个温度，今天穿了个蓝白色的卫衣，挺可爱的，
+  <summary><font color="White">2023 12/7</font></summary>
+  <p>
+    输入密码：
+    <input type="password" id="password9" />
+    <button onclick="checkPassword('password9', 'result9', 'content9')">确认</button>
+    <span id="result9"></span>
+  </p>
+  <pre><code id="content9" style="display: none;">
+好久不见，已经有一年多没有更新新博客了吧，工作后都挺忙的，要不是今天公司没什么事我可能也不会想到我还有博客。今天天气晴，温度22，非常舒服的一个温度，今天穿了个蓝白色的卫衣，挺可爱的，
 反正就是还不错。回顾这一年，记不清发生了什么，一会一定要经常记录一下了，好像第五次参加CGJ,这次是线下的，组到3个队友，做了个叫合合乐的游戏，玩法玩家本身颜色会发生变化，道具会像弹幕一样
 的发射出来，出错颜色扣血，吃对颜色加血，然后还有一个任务系统，吃指定组合也会加分，差不多就是这样，我感觉没什么创新，就是一个非常中规中矩的小游戏，不过还是很不错了，两天时间按时做完了
-没有熬夜弄。还有就是去了躺无锡，参加公司的数字产业大会，后面就是小幺妹来厦门玩，带他在厦门到处转了，岛内很多地方都去了，还有一件事认识了一位新朋友，今天差不多就这样吧，工作去了
+没有熬夜弄。还有就是去了躺无锡，参加公司的数字产业大会，后面就是小幺妹来厦门玩，带他在厦门到处转了，岛内很多地方都去了，还有一件事认识了一位新朋友，兴趣爱好都很相同，人也很不错，喜欢美食，
+喜欢玩游戏，喜欢户外运动什么的，emm,好忙，下次在聊，时间过去太久了好多事情都记不太清了，今天差不多就这样吧，工作去了
 </code></pre>
 </details>
-	  
+<details>
+  <summary><font color="White">2023 12/13</font></summary>
+  <p>
+    输入密码：
+    <input type="password" id="password10" />
+    <button onclick="checkPassword('password10', 'result10', 'content10')">确认</button>
+    <span id="result10"></span>
+  </p>
+  <pre><code id="content10" style="display: none;">
+天气晴温度20，最近我把博客加了很懂功能，添加了音乐播放器，IT工具网站，和AI对话系统网站，在调用这个问题上折磨了我好久，昨天晚上也是弄了好久才去睡觉，不过还好终是搞明白了，虽然没办法解决，但是起码
+知道了问题所在，主要就是Http不安全链接，无法在网站内部直接调用，这是由于浏览器安全性的问题限制了调用外部不安全链接，如果要让链接安全，就得设置给被调用的网站安装证书设置为https，然后这个
+安装证书又需要域名，域名又需要去备案，实在是太麻烦了，索性我直接把链接用挂载的方式，点击跳转过去访问。一会我准备在加个聊天系统，在博客上，晚点在弄，今天公司的服务器被攻击了，有点忙，我先去处理问题了
+下次见。
+</code></pre>
+</details>	  
 	</div>
 
 	<div>
