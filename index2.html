@@ -2,16 +2,18 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
-<title>手机手势绘图</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>后置摄像头手势控制</title>
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;}
-  body{overflow:hidden;background:#000;}
-  video,canvas{position:fixed;top:0;left:0;width:100vw;height:100vh;object-fit:cover;}
-  canvas{z-index:10;}
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{overflow:hidden;background:#000;}
+    video,canvas{position:fixed;top:0;left:0;width:100vw;height:100vh;object-fit:cover;}
+    canvas{z-index:10;}
+    .tips{position:fixed;top:20px;width:100%;text-align:center;color:#0f0;font-size:16px;z-index:999;}
 </style>
 </head>
 <body>
+<div class="tips">伸出食指即可画线 ✋</div>
 <video id="video" autoplay muted playsinline></video>
 <canvas id="c"></canvas>
 
@@ -19,49 +21,58 @@
 <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
 
 <script>
-const video=document.getElementById('video');
-const canvas=document.getElementById('c');
-const ctx=canvas.getContext('2d');
-canvas.width=window.innerWidth;
-canvas.height=window.innerHeight;
+const video = document.getElementById('video');
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-let points=[];
+let points = [];
 
-const hands=new Hands({locateFile:file=>`https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`});
+// 手势模型
+const hands = new Hands({
+    locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`
+});
 hands.setOptions({
-  maxNumHands:1,
-  modelComplexity:0,
-  minDetectionConfidence:0.5,
-  minTrackingConfidence:0.5
+    maxNumHands: 1,
+    modelComplexity: 1,
+    minDetectionConfidence: 0.6,
+    minTrackingConfidence: 0.6
 });
 
-hands.onResults(results=>{
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-  if(results.multiHandLandmarks.length){
-    const tip=results.multiHandLandmarks[0][8];
-    let x=tip.x*canvas.width;
-    let y=tip.y*canvas.height;
-    points.push({x,y});
-    if(points.length>60) points.shift();
+hands.onResults((res) => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (res.multiHandLandmarks.length > 0) {
+        const tip = res.multiHandLandmarks[0][8];
+        const x = tip.x * canvas.width;
+        const y = tip.y * canvas.height;
+        points.push({ x, y });
+        if (points.length > 60) points.shift();
 
-    ctx.beginPath();
-    ctx.strokeStyle="#00ff88";
-    ctx.lineWidth=5;
-    points.forEach((p,i)=>i?ctx.lineTo(p.x,p.y):ctx.moveTo(p.x,p.y));
-    ctx.stroke();
-  }
+        ctx.beginPath();
+        ctx.strokeStyle = "#00ffcc";
+        ctx.lineWidth = 6;
+        ctx.lineCap = "round";
+        points.forEach((p, i) => {
+            i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y);
+        });
+        ctx.stroke();
+    }
 });
 
-new Camera(video,{
-  onFrame:async()=>await hands.send({image:video}),
-  width:window.screen.width,
-  height:window.screen.height
-}).start();
+// 🔥 关键：强制调用后置摄像头
+async function startBackCamera() {
+    const stream = await navigator.mediaDevices.getUserMedia({
+        video: {
+            facingMode: "environment"  // 这个就是后置镜头
+        }
+    });
+    video.srcObject = stream;
+}
 
-window.addEventListener('resize',()=>{
-  canvas.width=innerWidth;
-  canvas.height=innerHeight;
-})
+startBackCamera().then(() => {
+    setInterval(() => hands.send({ image: video }), 30);
+});
 </script>
 </body>
 </html>
